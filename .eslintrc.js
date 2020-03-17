@@ -23,7 +23,10 @@ module.exports = {
   },
   "plugins": [
     "react",
-    "@typescript-eslint"
+    "react-app",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
   ],
   "rules": {
     "prettier/prettier": [
@@ -34,6 +37,7 @@ module.exports = {
       }
     ],
     "no-var": "error",
+    "react/prop-types": "off",
     "prefer-const": "error",
     "object-shorthand": "error",
     "prefer-arrow-callback": "error"
