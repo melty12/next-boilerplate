@@ -49,5 +49,11 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/markdown-it": "0.0.9",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "markdown-it": "^10.0.0"
   }
 }

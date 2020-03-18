@@ -1,2 +1,28 @@
-const withTypescript = require("@zeit/next-typescript");
-module.exports = withTypescript();
+const axios = require('axios');
+
+require('dotenv').config();
+
+module.exports = {
+  exportPathMap: async function() {
+    const paths = {
+      '/': {page: '/'},
+    };
+    const key = {
+      headers: {'X-API-KEY': process.env.API_KEY},
+    };
+    const res = await axios.get(
+      `https://komeiotake.microcms.io/api/v1/news/`,
+      key,
+    );
+    const data = await res.data.contents;
+
+    data.forEach(page => {
+      paths[`/news/${page.id}`] = {page: '/news/[id]', query: {id: page.id}};
+    });
+
+    return paths;
+  },
+  env: {
+    api_key: process.env.API_KEY,
+  },
+};
