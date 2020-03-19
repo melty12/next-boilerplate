@@ -24,5 +24,6 @@ module.exports = {
   },
   env: {
     api_key: process.env.API_KEY,
+    write_api_key: process.env.WRITE_API_KEY
   },
 };
