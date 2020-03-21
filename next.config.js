@@ -6,6 +6,7 @@ module.exports = withSass({
   exportPathMap: async function() {
     const paths = {
       '/': {page: '/'},
+      '/contacts': {page: '/contacts'}
     };
     const key = {
       headers: {'X-API-KEY': process.env.API_KEY},
