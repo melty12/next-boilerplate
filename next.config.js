@@ -1,8 +1,8 @@
 const axios = require('axios');
-
+const withSass = require('@zeit/next-sass');
 require('dotenv').config();
 
-module.exports = {
+module.exports = withSass({
   exportPathMap: async function() {
     const paths = {
       '/': {page: '/'},
@@ -26,4 +26,4 @@ module.exports = {
     api_key: process.env.API_KEY,
     write_api_key: process.env.WRITE_API_KEY
   },
-};
+});

@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from '../components/header'
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
+import "../assets/styles/main.scss"
 
 type LayoutProps = {
   title?: string
